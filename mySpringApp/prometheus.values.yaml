@@ -1177,22 +1177,6 @@ serverFiles:
         static_configs:
           - targets:
              - localhost:9090
-      - job_name: springtomcat
-        static_configs:
-          - targets:
-             - springtomcat:9300
-      - job_name: springmvc
-        static_configs:
-          - targets:
-             - springmvc:9300 
-      - job_name: springjetty
-        static_configs:
-          - targets:
-             - springjetty:9300
-      - job_name: embeddedjetty
-        static_configs:
-          - targets:
-             - embeddedjetty:9300
       - job_name: blackbox
         metrics_path: /probe
         params:

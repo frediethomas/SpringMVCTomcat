@@ -15,10 +15,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springmvc
-  annotations:
-   prometheus.io/scrape: "true"
-   prometheus.io/port: "9300"
+  name: springmvc  
 spec:
   replicas: 3
   selector:
@@ -39,6 +36,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: springmvc
+  annotations:
+   prometheus.io/scrape: "true"
+   prometheus.io/port: "9300"
 spec:
   type: LoadBalancer
   selector:
@@ -133,10 +133,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: embeddedjetty
-  annotations:
-   prometheus.io/scrape: "true"
-   prometheus.io/port: "9300"
+  name: embeddedjetty  
 spec:
   replicas: 2
   selector:
@@ -157,6 +154,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: embeddedjetty
+  annotations:
+   prometheus.io/scrape: "true"
+   prometheus.io/port: "9300"
 spec:
   type: ClusterIP
   selector:
