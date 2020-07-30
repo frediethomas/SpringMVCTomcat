@@ -16,7 +16,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: springmvc
+  annotations:
+   prometheus.io/scrape: "true"
+   prometheus.io/port: "9300"
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: springmvc
@@ -52,6 +56,7 @@ kind: Deployment
 metadata:
   name: springtomcat
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: springtomcat
@@ -70,6 +75,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: springtomcat
+  annotations:
+   prometheus.io/scrape: "true"
+   prometheus.io/port: "9300"
 spec:
   type: ClusterIP
   selector:
@@ -87,6 +95,7 @@ kind: Deployment
 metadata:
   name: springjetty
 spec:
+  replicas: 4
   selector:
     matchLabels:
       app: springjetty
@@ -105,6 +114,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: springjetty
+  annotations:
+   prometheus.io/scrape: "true"
+   prometheus.io/port: "9300"
 spec:
   type: ClusterIP
   selector:
@@ -122,7 +134,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: embeddedjetty
+  annotations:
+   prometheus.io/scrape: "true"
+   prometheus.io/port: "9300"
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: embeddedjetty
