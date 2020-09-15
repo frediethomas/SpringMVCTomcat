@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springmvc  
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: springmvc
+  template:
+    metadata:
+      labels:
+        app: springmvc
+    spec:
+      containers:
+        - name: server
+          imagePullPolicy: Always
+          image: docker.io/keerthi19/springmvc:latest6
+          ports:
+          - containerPort: 8080
+---
