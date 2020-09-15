@@ -8,7 +8,7 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Hello Guys</h1>
         <p>This is the homepage!</p>
     </body>
 </html>
