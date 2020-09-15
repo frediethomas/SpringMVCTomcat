@@ -1,0 +1,8 @@
+FROM tomcat:8-jdk8-openjdk
+ADD ./target/mySpringApp.war /usr/local/tomcat/webapps/
+COPY InfyBuddy.jar /usr/local/tomcat/webapps/InfyBuddy.jar
+COPY opentelemetry-auto-all.jar /usr/local/tomcat/webapps/opentelemetry-auto-all.jar
+COPY setenv.sh /usr/local/tomcat/bin/setenv.sh
+EXPOSE 8080
+EXPOSE 9300
+CMD ["catalina.sh", "run"]
