@@ -126,4 +126,4 @@ EC2 instance creation in AWS
 	
 	helm install jaeger jaegertracing/jaeger -f jaeger_values.yaml
 	
-	View the Grafana Dashboard and select any of the services (say :MVC ) and find traces. We will see the entire flow of events across apllications within a trace.
+	View the jaeger Dashboard and select any of the services (say :MVC ) and find traces. We will see the entire flow of events across apllications within a trace.
