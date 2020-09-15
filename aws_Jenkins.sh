@@ -38,3 +38,7 @@ wget http://mirrors.gigenet.com/apache/maven/maven-3/3.6.3/binaries/apache-maven
 
 sudo tar -zxvf apache-maven-3.6.3-bin.tar.gz -C /opt/
 
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+sudo chmod 666 /var/run/docker.sock
+
