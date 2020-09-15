@@ -121,6 +121,7 @@ EC2 instance creation in AWS
 	
 	http_request_api_latency     Summary
 	
+	
 3. To enable trace in application
 	From SpringMVCTomcat application folder, excute the command
 	
