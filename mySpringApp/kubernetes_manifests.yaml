@@ -29,7 +29,7 @@ spec:
       containers:
         - name: server
           imagePullPolicy: Always
-          image: docker.io/keerthi19/springmvc:latest6
+          image: docker.io/frediethomas/springmvc:v7
           ports:
           - containerPort: 8080
 ---
